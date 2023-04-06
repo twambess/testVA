@@ -54,10 +54,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <environmentVariables>
-                        <token>${env.token}</token>
-                        <delay>${env.delay}</delay>
-                    </environmentVariables>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>

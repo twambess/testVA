@@ -31,8 +31,6 @@ public interface UserRepo extends JpaRepository<User, Long> {
     @Query(value = "SELECT * FROM tg_data ORDER BY tg_data.time_last_message DESC,time_last_message DESC  LIMIT 1",nativeQuery = true)
     User updateLastMessage();
 
-    @Transactional
-    @Query()
 
     Optional<User> findUserByName(String name);
 }
