@@ -14,7 +14,6 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Service;
 
 import java.sql.Time;
-import java.time.Instant;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -25,8 +24,8 @@ import java.util.List;
 public class Bot implements UpdatesListener {
 
 
-    public static String token=MyBean.arg1Value;
-    public static long delay=MyBean.arg2Value;
+    public static String token = MyBean.arg1Value;
+    public static long delay = MyBean.arg2Value;
     private final TelegramBot bot;
 
     private final UserRepo repo;

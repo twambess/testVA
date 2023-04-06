@@ -25,10 +25,10 @@ public interface UserRepo extends JpaRepository<User, Long> {
     @Transactional
     @Modifying
     @Query("update tg_data u set u.lastMessage=:message where u.name=:name")
-    void updateLastMessageOld(@Param("message") String message,@Param("name") String name);
+    void updateLastMessageOld(@Param("message") String message, @Param("name") String name);
 
     @Transactional
-    @Query(value = "SELECT * FROM tg_data ORDER BY tg_data.time_last_message DESC,time_last_message DESC  LIMIT 1",nativeQuery = true)
+    @Query(value = "SELECT * FROM tg_data ORDER BY tg_data.time_last_message DESC,time_last_message DESC  LIMIT 1", nativeQuery = true)
     User updateLastMessage();
 
 
