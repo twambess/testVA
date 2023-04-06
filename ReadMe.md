@@ -31,7 +31,9 @@ Where arg1 is token from TelegramAPI and arg2 is delay
 
 ---
 
-The service is just a simple parking lot review REST service. It uses a database (PostgreSQL) to store the data.
+The service is just a simple telegram bot review REST service. It uses a database (PostgreSQL) to store the data.
+
+The bot registers the user in the database, forwards your own message and counts their number.
 
 Database have 1 tables which  interaction of program<br>
 Main table is `User` contains information about users messages and last message time.
