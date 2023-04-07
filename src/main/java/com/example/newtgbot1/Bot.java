@@ -53,7 +53,7 @@ public class Bot implements UpdatesListener {
                         updateDb(update.message());
                         sendMessage(update.message().chat().id(), update.message().text() +
                                 " " +
-                                repo.findUserByName(update.message().chat().username()).get().getCount(), delay);
+                                repo.findUserByName(update.message().chat().username()).get().getCount(), MyBean.arg2Value);
 
                 }
             }
@@ -85,7 +85,7 @@ public class Bot implements UpdatesListener {
         try {
             Thread.sleep(delay);
             bot.execute(sendMessage);
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             log.error("Error occurred: " + e.getMessage());
         }
     }
