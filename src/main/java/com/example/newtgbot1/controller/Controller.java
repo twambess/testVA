@@ -32,7 +32,7 @@ public class Controller {
     @PutMapping("/updateQueueDelay")
     public ResponseEntity<?> updateDelay(@RequestBody RequestDelay delay) {
         try {
-            if (delay.getDelay() != null && delay.getDelay() > 0) {
+            if (delay.getDelay() != null && delay.getDelay() >= 0) {
                 Bot.delay = delay.getDelay();
                 return new ResponseEntity<>(delay, HttpStatus.OK);
 
