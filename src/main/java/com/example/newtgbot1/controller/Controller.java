@@ -1,6 +1,7 @@
 package com.example.newtgbot1.controller;
 
 import com.example.newtgbot1.Bot;
+import com.example.newtgbot1.MyBean;
 import com.example.newtgbot1.data.RequestDelay;
 import com.example.newtgbot1.repo.UserRepo;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +34,7 @@ public class Controller {
     public ResponseEntity<?> updateDelay(@RequestBody RequestDelay delay) {
         try {
             if (delay.getDelay() != null && delay.getDelay() >= 0) {
-                Bot.delay = delay.getDelay();
+                MyBean.arg2Value = delay.getDelay();
                 return new ResponseEntity<>(delay, HttpStatus.OK);
 
             } else
